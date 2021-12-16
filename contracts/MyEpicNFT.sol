@@ -14,11 +14,11 @@ contract MyEpicNFT is ERC721URIStorage{
 
     string baseSvg = "<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'><style>.base { fill: white; font-family: serif; font-size: 24px; }</style><rect width='100%' height='100%' fill='black' /><text x='50%' y='50%' class='base' dominant-baseline='middle' text-anchor='middle'>";
 
-    string[] firstWords = ["Epic", "Awesome", "Deadly", "Lethal", "Chilled", "Messy", "Grand"];
-    string[] secondWords = ["Spaghetti", "Lasagne", "Pizza", "Hamburger", "Rice", "Pasta"];
+    string[] firstWords = ["Epic", "Awesome", "Deadly", "Lethal", "Chilled", "Messy", "Grand", "Lazy", "Godly"];
+    string[] secondWords = ["Spaghetti", "Lasagne", "Pizza", "Hamburger", "Rice", "Pasta", "Sandwich", "Steak", "Chips"];
     string[] thirdWords = ["Ezio", "Connor", "Kassandra", "Edward", "Altair", "Bayek", "Shay", "Alexios","Aveline"];
 
-    constructor() ERC721 ("Project NFT v1", "Character"){
+    constructor() ERC721 ("Project NFT v2", "Character"){
         console.log("First NFT contract");
     }
 
