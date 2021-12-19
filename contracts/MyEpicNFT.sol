@@ -20,7 +20,7 @@ contract MyEpicNFT is ERC721URIStorage{
 
     event NewEpicNFTMinted(address sender, uint256 tokenId);
 
-    constructor() ERC721 ("Project NFT v3", "Character"){
+    constructor() ERC721 ("Project NFT v4", "Character"){
         console.log("First NFT contract");
     }
 
@@ -48,6 +48,7 @@ contract MyEpicNFT is ERC721URIStorage{
 
     function makeAnEpicNFT() public {
         uint256 newItemId = _tokenIds.current();
+        require(newItemId < 10, "Maximum supply reached");
 
         string memory first = pickRandomFirstWord(newItemId);
         string memory second = pickRandomSecondWord(newItemId);
@@ -88,5 +89,9 @@ contract MyEpicNFT is ERC721URIStorage{
         _tokenIds.increment();
 
         emit NewEpicNFTMinted(msg.sender, newItemId);
+    }
+
+    function getTotalNFTsMintedSoFar() public view returns (uint256) {
+        return _tokenIds.current();
     }
 }
